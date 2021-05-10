@@ -60,6 +60,8 @@ $(document).ready(function() {
 
   function win() {
     $("p#status").text("Felicitări!");
+    $("p#status").css({"background": "#2ecc71"});
+    $("img#main-image").attr("src", "./assets/win.gif");
     game_is_finished = true;
   }
 
