@@ -45,7 +45,7 @@ $(document).ready(function() {
 
 
   function fail() {
-    $("img#main-image").attr("src", "./images/" + fails.toString() + ".png");
+    $("img#main-image").attr("src", "./assets/" + fails.toString() + ".png");
     $("p#status").text("Wrong letters: " + wrong_letters);
 
     if(fails > max_fails) {
