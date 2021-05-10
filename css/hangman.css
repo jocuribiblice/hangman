@@ -12,11 +12,14 @@ div.container img {
 }
 
 a.btn {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
+  margin-right: 3px;
 }
 
 p#status {
   background: #F3BC3C;
   color: #613E26;
   padding: 10px;
+  border: 2px solid #613E26;
+  border-radius: 10px;
 }

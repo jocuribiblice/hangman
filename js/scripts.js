@@ -83,33 +83,69 @@ $(document).ready(function() {
     }
   }
 
+  function init_letters() {
+    var letters = ["a", "ă", "â", "î", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "ș", "t", "ț", "u", "v", "w", "x", "y", "z"];
+    for (var i = 0; i < letters.length; i++) {
+      $("p#letters").append(
+        "<a href='' class='btn btn-warning btn-sm btn-letter'>" + letters[i].toUpperCase() + "</a>"
+      );
+    }
+  }
 
   function start_game() {
     choose_word();
+    init_letters();
     refresh_public_word();
     $("p#status").text("Cine a fost? Ajutor: " + window.hint);
+
+    $("a.btn-letter").on("click", function(evt) {
+      evt.preventDefault();
+
+      if(!game_is_finished) {
+        var key = $(this).text().toLowerCase();
+
+        if (key.match(/[a-zA-Z\u00C0-\u024F\u1E00-\u1EFF]/g)) {
+          var test = test_letter(key);
+          if(test != -1) {
+            for(var i = 0; i <= secret_word.length; i++) {
+              if(secret_word[i] == key) {
+                public_word = replace_str(public_word, i, key);
+              }
+            }
+
+            refresh_public_word();
+
+            if(public_word == secret_word) {
+              win();
+            }
+          } else if (add_wrong_letter(key)){
+            fail();
+          }
+        }
+      }
+    });
 
     $(document).keypress(function(event) {
       if(!game_is_finished) {
         var key = String.fromCharCode(event.which).toLowerCase();
-        if (key.match(/[a-z]/g)){
-        var test = test_letter(key);
-        if(test != -1) {
-          for(var i = 0; i <= secret_word.length; i++) {
-            if(secret_word[i] == key) {
-              public_word = replace_str(public_word, i, key);
+        if (key.match(/[a-zA-Z\u00C0-\u024F\u1E00-\u1EFF]/g)) {
+          var test = test_letter(key);
+          if(test != -1) {
+            for(var i = 0; i <= secret_word.length; i++) {
+              if(secret_word[i] == key) {
+                public_word = replace_str(public_word, i, key);
+              }
             }
-          }
 
-          refresh_public_word();
+            refresh_public_word();
 
-          if(public_word == secret_word) {
-            win();
+            if(public_word == secret_word) {
+              win();
+            }
+          } else if (add_wrong_letter(key)){
+            fail();
           }
-        } else if (add_wrong_letter(key)){
-          fail();
         }
-      }
       }
     });
   }
