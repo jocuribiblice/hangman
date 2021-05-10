@@ -6,6 +6,7 @@ p#public-word {
 }
 
 div.container img {
-  max-height: 300px;
+  max-height: 100px;
   width: auto;
+  margin-bottom: 1em;
 }

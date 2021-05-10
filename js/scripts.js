@@ -1,6 +1,6 @@
 $(document).ready(function() {
-  window.fails = 0;
-  window.max_fails = 5;
+  window.fails = 1;
+  window.max_fails = 7;
   window.possible_words = [
     ["adam", "primul om"],
     ["eva", "prima femeie"],
