@@ -1,6 +1,6 @@
 p#public-word {
   letter-spacing: 0.5em;
-  font-size: 3em;
+  font-size: 1.5em;
   font-family: monospace;
   text-transform: uppercase;
 }
@@ -9,4 +9,14 @@ div.container img {
   max-height: 100px;
   width: auto;
   margin-bottom: 1em;
+}
+
+a.btn {
+  margin-bottom: 10px;
+}
+
+p#status {
+  background: #F3BC3C;
+  color: #613E26;
+  padding: 10px;
 }
