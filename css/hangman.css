@@ -1,0 +1,10 @@
+p#public-word {
+  letter-spacing: 0.5em;
+  font-size: 3em;
+  font-family: monospace;
+}
+
+div.container img {
+  max-height: 300px;
+  width: auto;
+}
