@@ -2,20 +2,20 @@ $(document).ready(function() {
   window.fails = 0;
   window.max_fails = 5;
   window.possible_words = [
-    "romania",
-    "italy",
-    "france",
-    "spain",
-    "hungary",
-    "moldova",
-    "two words",
-    "lorem ipsum dolor",
-    "lorem ipsum dolor sit amet"
+    ["adam", "primul om"],
+    ["eva", "prima femeie"],
+    ["avraam", "părintele credincioșilor"],
+    ["moise", "a scris Geneza"],
+    ["pavel", "a scris epistole"],
+    ["zacheu", "s-a urcat într-un copac"],
+    ["estera", "împărăteasă frumoasă"],
+    ["mardoheu", "apare în cartea Estera"],
   ];
   window.secret_word = "hangman";
   window.public_word = "_______";
   window.game_is_finished = false;
   window.wrong_letters = [];
+  window.hint = "";
 
 
   function replace_str(str, pos, value){
@@ -27,7 +27,9 @@ $(document).ready(function() {
 
   function choose_word() {
     var random_number = Math.floor(Math.random() * possible_words.length);
-    secret_word = possible_words[random_number];
+    selected_word = possible_words[random_number];
+    secret_word = selected_word[0];
+    window.hint = selected_word[1];
     public_word = Array(secret_word.length + 1).join("_");
 
     for(var i = 0; i <= secret_word.length; i++) {
@@ -39,14 +41,14 @@ $(document).ready(function() {
 
 
   function game_over() {
-    $("p#status").text("Game over! The word was: " + secret_word);
+    $("p#status").text("Ai pierdut. Cuvântul era: " + secret_word);
     game_is_finished = true;
   }
 
 
   function fail() {
     $("img#main-image").attr("src", "./assets/" + fails.toString() + ".png");
-    $("p#status").text("Wrong letters: " + wrong_letters);
+    $("p#status").text("Litere greșite: " + wrong_letters);
 
     if(fails > max_fails) {
       game_over();
@@ -57,7 +59,7 @@ $(document).ready(function() {
 
 
   function win() {
-    $("p#status").text("Congrats!");
+    $("p#status").text("Felicitări!");
     game_is_finished = true;
   }
 
@@ -85,6 +87,7 @@ $(document).ready(function() {
   function start_game() {
     choose_word();
     refresh_public_word();
+    $("p#status").text("Cine a fost? Ajutor: " + window.hint);
 
     $(document).keypress(function(event) {
       if(!game_is_finished) {
