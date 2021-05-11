@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.1 - (unreleased)
+--------------------
+* TODO: bigger buttons with letters
+
 1.1.0 - (2021-05-11)
 --------------------
 * Improve: texts, design, definitions, behaviour.
