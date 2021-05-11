@@ -4,6 +4,17 @@ $(document).ready(function() {
   window.possible_words = [
     ["adam", "primul om"],
     ["eva", "prima femeie"],
+    ["cain", "primul copil născut"],
+    ["abel", "ucis de Cain"],
+    ["set", "copil al lui Adam"],
+    ["enoh", "a umblat cu Dumnezeu"],
+    ["metusala", "a trăit mult"],
+    ["lameh", "tatăl lui Noe"],
+    ["noe", "a construit o arcă"],
+    ["sem", "fiu al lui Noe"],
+    ["ham", "fiu al lui Noe"],
+    ["iafet", "fiu al lui Noe"],
+
     ["avraam", "părintele credincioșilor"],
     ["moise", "a scris Geneza"],
     ["pavel", "a scris epistole"],
