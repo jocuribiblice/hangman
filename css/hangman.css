@@ -17,9 +17,7 @@ a.btn {
 }
 
 p#status {
-  background: #F3BC3C;
-  color: #613E26;
+  background: #EEEEEE;
   padding: 10px;
-  border: 2px solid #613E26;
   border-radius: 10px;
 }

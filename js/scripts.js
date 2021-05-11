@@ -14,13 +14,19 @@ $(document).ready(function() {
     ["sem", "fiu al lui Noe"],
     ["ham", "fiu al lui Noe"],
     ["iafet", "fiu al lui Noe"],
-
+    ["terah", "tatăl lui Avraam"],
     ["avraam", "părintele credincioșilor"],
+    ["sara", "soția lui Avraam"],
     ["moise", "a scris Geneza"],
     ["pavel", "a scris epistole"],
     ["zacheu", "s-a urcat într-un copac"],
     ["estera", "împărăteasă frumoasă"],
     ["mardoheu", "apare în cartea Estera"],
+    ["aaron", "fratele lui Moise"],
+    ["aaron", "fratele lui Moise"],
+    ["beniamin", "fiu al lui Iacov"],
+    ["iosif", "vândut ca rob în Egipt"],
+    ["lazăr", "înviat de Isus"],
   ];
   window.secret_word = "hangman";
   window.public_word = "_______";
@@ -59,7 +65,7 @@ $(document).ready(function() {
 
   function fail() {
     $("img#main-image").attr("src", "./assets/" + fails.toString() + ".png");
-    $("p#status").text("Litere greșite: " + wrong_letters);
+    $("p#status").text("Ajutor: " + window.hint + " Litere greșite: " + wrong_letters);
 
     if(fails > max_fails) {
       game_over();
@@ -91,7 +97,7 @@ $(document).ready(function() {
     if (wrong_letters.indexOf(letter) > -1)
       return false;
     else {
-      wrong_letters.push(letter);
+      wrong_letters.push(letter.toUpperCase());
       return true;
     }
   }
@@ -109,7 +115,7 @@ $(document).ready(function() {
     choose_word();
     init_letters();
     refresh_public_word();
-    $("p#status").text("Cine a fost? Ajutor: " + window.hint);
+    $("p#status").text("Ajutor: " + window.hint);
 
     $("a.btn-letter").on("click", function(evt) {
       evt.preventDefault();
@@ -158,6 +164,11 @@ $(document).ready(function() {
           } else if (add_wrong_letter(key)){
             fail();
           }
+        }
+      } else {
+        var key = String.fromCharCode(event.which).toLowerCase();
+        if (key == 13 || key == "\r") {
+          window.location.href = "";
         }
       }
     });
