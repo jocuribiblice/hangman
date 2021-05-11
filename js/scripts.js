@@ -58,7 +58,7 @@ $(document).ready(function() {
 
 
   function game_over() {
-    $("p#status").text("Ai pierdut. Cuvântul era: " + secret_word.toUpperCase());
+    $("p#status").text("Răspuns corect: " + secret_word.toUpperCase());
     game_is_finished = true;
   }
 
