@@ -3,7 +3,6 @@ Changelog
 
 1.1.2 - (unreleased)
 --------------------
-TODO: update number of defintion in game description.
 
 1.1.1 - (2021-05-12)
 --------------------
