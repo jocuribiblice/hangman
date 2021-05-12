@@ -1,10 +1,11 @@
 Changelog
 =========
 
-1.1.1 - (unreleased)
+1.1.1 - (2021-05-12)
 --------------------
 * Improve: better definitions, unique, clear.
-* TODO: bigger buttons with letters
+* Improve: bigger buttons for letters, easier on mobile.
+  [GhitaB]
 
 1.1.0 - (2021-05-11)
 --------------------

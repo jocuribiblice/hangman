@@ -135,7 +135,7 @@ $(document).ready(function() {
     var letters = ["a", "ă", "â", "î", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "ș", "t", "ț", "u", "v", "w", "x", "y", "z"];
     for (var i = 0; i < letters.length; i++) {
       $("p#letters").append(
-        "<a href='' class='btn btn-warning btn-sm btn-letter'>" + letters[i].toUpperCase() + "</a>"
+        "<a href='' class='btn btn-warning btn-letter'>" + letters[i].toUpperCase() + "</a>"
       );
     }
   }
