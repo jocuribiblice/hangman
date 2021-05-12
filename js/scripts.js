@@ -40,6 +40,15 @@ $(document).ready(function() {
     ["iosif", "vândut ca rob în Egipt de către frații lui"],
     ["aaron", "fratele lui Moise care l-a însoțit în Egipt"],
     ["beniamin", "fiul cel mai mic al lui Iacov"],
+    ["rebeca", "soția frumoasă a lui Isaac"],
+    ["ismael", "fiu al lui Avraam, născut de Agar"],
+    ["esau", "fratele geamăn al lui Iacov"],
+    ["laban", "fiu al lui Nahor, tatăl Rahelei"],
+    ["rahela", "soția lui Iacov, soră cu Lea"],
+    ["lea", "soția lui Iacov, soră cu Rahela"],
+    ["ruben", "fiu al lui Iacov, născut de Lea; înseamnă „Vedeți fiu”"],
+    ["neftali", "fiu al lui Iacov, născut de Bilha; înseamnă „Luptele lui Dumnezeu”"],
+    ["așer", "fiu al lui Iacov; numele lui înseamnă „Fericit”"],
 
     // ETC
     ["pavel", "a scris multe epistole în Noul Testament"],
