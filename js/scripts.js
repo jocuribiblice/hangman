@@ -94,7 +94,7 @@ $(document).ready(function() {
 
   function fail() {
     $("img#main-image").attr("src", "./assets/" + fails.toString() + ".png");
-    $("p#status").text("Ajutor: " + window.hint + " Litere greșite: " + wrong_letters);
+    $("p#status").text(window.hint + " >>> Litere greșite: " + wrong_letters);
 
     if(fails > max_fails) {
       game_over();
@@ -144,7 +144,7 @@ $(document).ready(function() {
     choose_word();
     init_letters();
     refresh_public_word();
-    $("p#status").text("Ajutor: " + window.hint);
+    $("p#status").text(window.hint);
 
     $("a.btn-letter").on("click", function(evt) {
       evt.preventDefault();
@@ -202,6 +202,11 @@ $(document).ready(function() {
       }
     });
   }
+
+  $("a#app-info-details").on("click", function(evt) {
+    evt.preventDefault();
+    $("div.app-info-details").toggle();
+  });
 
   start_game();
 });

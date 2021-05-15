@@ -3,6 +3,7 @@ Changelog
 
 1.1.2 - (unreleased)
 --------------------
+* Improve: show info only on click. Simplify content.
 
 1.1.1 - (2021-05-12)
 --------------------
