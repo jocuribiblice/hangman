@@ -89,6 +89,7 @@ $(document).ready(function() {
   function game_over() {
     $("p#status").text("Răspuns corect: " + secret_word.toUpperCase());
     game_is_finished = true;
+    $("a#next-exercise").removeClass("disabled");
   }
 
 
@@ -109,6 +110,7 @@ $(document).ready(function() {
     $("p#status").css({"background": "#2ecc71"});
     $("img#main-image").attr("src", "./assets/win.gif");
     game_is_finished = true;
+    $("a#next-exercise").removeClass("disabled");
   }
 
 
@@ -145,6 +147,7 @@ $(document).ready(function() {
     init_letters();
     refresh_public_word();
     $("p#status").text(window.hint);
+    $("a#next-exercise").addClass("disabled");
 
     $("a.btn-letter").on("click", function(evt) {
       evt.preventDefault();
