@@ -4,14 +4,17 @@ Changelog
 1.1.4 - (unreleased)
 --------------------
 * Improve: Prevent go to next before finishing exercise.
+  [GhitaB]
 
 1.1.3 - (2021-05-16)
 --------------------
 * Improve: better layout.
+  [GhitaB]
 
 1.1.2 - (2021-05-16)
 --------------------
 * Improve: show info only on click. Simplify content.
+  [GhitaB]
 
 1.1.1 - (2021-05-12)
 --------------------
