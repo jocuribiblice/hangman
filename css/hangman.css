@@ -26,9 +26,3 @@ p.app-info {
   border-top: 1px solid #CCCCCC;
   border-bottom: 1px solid #CCCCCC;
 }
-
-a.disabled {
-  opacity: 0.5;
-  pointer-events: none;
-  cursor: default;
-}
