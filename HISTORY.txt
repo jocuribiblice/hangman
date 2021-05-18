@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.4 - (unreleased)
+1.1.4 - (2021-05-18)
 --------------------
 * Improve: Prevent go to next before finishing exercise.
   [GhitaB]
